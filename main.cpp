@@ -4,14 +4,13 @@ using namespace std;
 
 #include "util.hpp"
 #include "pessoa.hpp"
+#include "Empresa.hpp"
 
 int main()
 {
-    Pessoa pessoa1;
+    Empresa *atacadoDosCalcado = new Empresa("Atacado dos Calcados", "40.101.588/0001-98", 156289.56);
 
-    pessoa1.setNome("wanderson");
-
-    std::cout << pessoa1.getNome();
+    atacadoDosCalcado->Empresa::carregaFuncoes();
 
     return 0;
 }
