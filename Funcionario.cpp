@@ -33,9 +33,11 @@ void Funcionario::setMatricula(std::string matricula)
     this->matricula = matricula;
 }
 
-void Funcionario::setIngressoEmpresa(Data ingressoEmpresa)
+void Funcionario::setIngressoEmpresa(int ano, int mes, int dia)
 {
-    this->ingressoEmpresa = ingressoEmpresa;
+    this->ingressoEmpresa.ano = ano;
+    this->ingressoEmpresa.mes = mes;
+    this->ingressoEmpresa.dia = dia;
 }
 
 /* MÉTODOS */

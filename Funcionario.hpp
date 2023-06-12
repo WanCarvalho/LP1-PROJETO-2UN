@@ -26,7 +26,7 @@ public:
 
     void setMatricula(std::string matricula);
 
-    void setIngressoEmpresa(Data ingressoEmpresa);
+    void setIngressoEmpresa(int ano, int mes, int dia);
 
     /* MÉTODOS */
     virtual float calcularSalario(int diasFaltas);

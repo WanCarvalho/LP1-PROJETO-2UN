@@ -3,7 +3,9 @@
 using namespace std;
 
 #include "util.hpp"
-#include "pessoa.hpp"
+#include "Asg.hpp"
+#include "Pessoa.hpp"
+#include "Funcionario.hpp"
 #include "Empresa.hpp"
 
 int main()
