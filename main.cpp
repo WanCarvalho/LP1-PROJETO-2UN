@@ -3,10 +3,12 @@
 using namespace std;
 
 #include "util.hpp"
-#include "Asg.hpp"
 #include "Pessoa.hpp"
 #include "Funcionario.hpp"
+#include "Asg.hpp"
+#include "Vendedor.hpp"
 #include "Empresa.hpp"
+#include "Gerente.hpp"
 
 int main()
 {
