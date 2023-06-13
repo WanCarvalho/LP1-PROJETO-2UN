@@ -79,7 +79,7 @@ void Empresa::carregaDono();
 
 void Empresa::imprimeAsgs(){
 
-    cout << "ASG No: 0" << endl;
+    cout << "ASG N°: 0" << endl;
     cout << "Nome: " << Asg::getNome(0) << endl;
     cout << "CPF: " << Asg::getCpf(0) << endl;
     cout << "Filhos: " << Asg::getQtdFilhos(0) << endl;
@@ -97,7 +97,7 @@ void Empresa::imprimeAsgs(){
 
 void Empresa::imprimeVendedores(){
 
-    cout << "ASG No: 0" << endl;
+    cout << "VENDEDOR N°: 0" << endl;
     cout << "Nome: " << Vendedor::getNome(0) << endl;
     cout << "CPF: " << Vendedor::getCpf(0) << endl;
     cout << "Filhos: " << Vendedor::getQtdFilhos(0) << endl;
@@ -116,7 +116,7 @@ void Empresa::imprimeVendedores(){
 
 void Empresa::imprimeGerentes(){
 
-    cout << "ASG No: 0" << endl;
+    cout << "GERENTE N°: 0" << endl;
     cout << "Nome: " << Gerente::getNome(0) << endl;
     cout << "CPF: " << Gerente::getCpf(0) << endl;
     cout << "Filhos: " << Gerente::getQtdFilhos(0) << endl;
