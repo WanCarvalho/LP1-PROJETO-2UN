@@ -43,7 +43,7 @@ float calcularSalario(int diasFaltas){
 
 }
 
-virtual float calcularRescisao(Data desligamento){
+float calcularRescisao(Data desligamento){
 
     float salario = std::stof(getSalario()); // converte string para float
 
