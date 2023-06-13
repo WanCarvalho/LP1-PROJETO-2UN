@@ -2,6 +2,10 @@
 #include <string>
 
 #include "Gerente.hpp"
+#include "Funcionario.hpp"
+#include "Pessoa.hpp"
+
+using namespace std;
 
 Gerente::Gerente() {}
 
@@ -25,5 +29,37 @@ void Gerente::setParticipacaoLucros(float participacaoLucros)
 }
 
 /* MÉTODOS */
-virtual float calcularSalario(int diasFaltas);
-virtual float calcularRescisao(Data desligamento);
+float calcularSalario(int diasFaltas){
+
+    float salario = std::stof(getSalario()); // converte string para float
+
+    float participacaoLucros = std::stof(getParticipacaoLucros());
+
+    salario -= (salario / 22) * diasFaltas; // calcula a diária com base em 22 dias trabalhados
+    salario += salario * participacaoLucros;
+    salario += salario + (qtdFilhos * 100); // acresce em R$100 o valor do salário a cada filho
+
+    return salario;
+
+}
+
+virtual float calcularRescisao(Data desligamento){
+
+    float salario = std::stof(getSalario()); // converte string para float
+
+    float salarioBaseAnual = salario * 12;
+
+    Data ingressoEmpresa = getIngressoEmpresa();
+
+    // Cálculo do tempo de trabalho em anos, considerando as frações de meses e dias
+    int anosTrabalhados = desligamento.ano - ingressoEmpresa.ano;
+    float mesesFracionados = (desligamento.mes - ingressoEmpresa.mes) / 12;
+    float diasFracionados = (desligamento.dia - ingressoEmpresa.dia) / 365;
+    float tempoTrabalho = anosTrabalhados + mesesFracionados + diasFracionados;
+
+    // Cálculo da rescisão
+    float rescisao = salarioBaseAnual * tempoTrabalho;
+
+    return rescisao;
+
+}

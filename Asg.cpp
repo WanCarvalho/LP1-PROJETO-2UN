@@ -30,9 +30,13 @@ void Asg::setAdicionalInsalubridade(float adicionalInsalubridade)
 /* MÉTODOS */
 float Asg::calcularSalario(int diasFaltas)
 {
-    this->salario -= (salario / 22) * diasFaltas; // calcula a diária com base em 22 dias trabalhados
-    this->salario += salario * adicionalInsalubridade;
-    this->salario += salario + (qtdFilhos * 100); // acresce em R$100 o valor do salário a cada filho
+    float salario = std::stof(getSalario()); // converte string para float
+
+    salario -= (salario / 22) * diasFaltas; // calcula a diária com base em 22 dias trabalhados
+    salario += salario * adicionalInsalubridade;
+    salario += salario + (qtdFilhos * 100); // acresce em R$100 o valor do salário a cada filho
+
+    return salario;
 }
 
 float Asg::calcularRescisao(Data desligamento)
