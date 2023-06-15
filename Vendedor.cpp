@@ -50,7 +50,7 @@ float Vendedor::calcularSalario(int diasFaltas){
     
     salario -= (salario / 22) * diasFaltas; // calcula a diária com base em 22 dias trabalhados
     salario += salario * gratificacao;
-    salario += salario + (qtdFilhos * 100); // acresce em R$100 o valor do salário a cada filho
+    salario += salario + (getQtdFilhos() * 100); // acresce em R$100 o valor do salário a cada filho
 
     return salario;
 

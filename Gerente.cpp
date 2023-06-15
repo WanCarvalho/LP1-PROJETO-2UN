@@ -29,21 +29,21 @@ void Gerente::setParticipacaoLucros(float participacaoLucros)
 }
 
 /* MÉTODOS */
-float calcularSalario(int diasFaltas){
+float Gerente::calcularSalario(int diasFaltas){
 
     float salario = std::stof(getSalario()); // converte string para float
 
-    float participacaoLucros = std::stof(getParticipacaoLucros());
+    float participacaoLucros = getParticipacaoLucros();
 
     salario -= (salario / 22) * diasFaltas; // calcula a diária com base em 22 dias trabalhados
     salario += salario * participacaoLucros;
-    salario += salario + (qtdFilhos * 100); // acresce em R$100 o valor do salário a cada filho
+    salario += salario + (getQtdFilhos() * 100); // acresce em R$100 o valor do salário a cada filho
 
     return salario;
 
 }
 
-float calcularRescisao(Data desligamento){
+float Gerente::calcularRescisao(Data desligamento){
 
     float salario = std::stof(getSalario()); // converte string para float
 
