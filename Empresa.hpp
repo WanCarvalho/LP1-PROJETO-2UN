@@ -30,9 +30,9 @@ public:
     std::string getCNPJ();
 
     Pessoa getDono();
-    Asg getAsg();
-    Gerente getGerente();
-    Vendedor getVendedor();
+    vector<Asg> getAsg();
+    vector<Gerente> getGerente();
+    vector<Vendedor> getVendedor();
 
     /* SETTERS */
     void setNomeEmpresa(std::string nomeEmpresa);
