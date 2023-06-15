@@ -25,6 +25,11 @@ Empresa::Empresa(std::string nomeEmpresa, std::string cnpj, float faturamentoMen
 }
 
 /* GETTERS */
+float Empresa::getFaturamentoMensal()
+{
+    return this->faturamentoMensal;
+}
+
 std::string Empresa::getNomeEmpresa()
 {
     return this->nomeEmpresa;
@@ -72,7 +77,19 @@ void Empresa::setFaturamentoMensal(float faturamentoMensal)
 }
 
 /* MÉTODOS */
-void Empresa::carregaFuncoes();
+void Empresa::carregaFuncoes()
+{
+    carregarEmpresa();
+    carregarAsg();
+    carregarVendedor();
+    carregarGerente();
+    carregarDono();
+    imprimeAsgs();
+    imprimeVendedores();
+    imprimeGerentes();
+    imprimeDono();
+    calculaTodosOsSalarios();
+}
 
 void Empresa::carregarEmpresa()
 {
@@ -107,10 +124,10 @@ void Empresa::carregarEmpresa()
     inputFile.close();
 }
 
-void Empresa::carregaAsg();
-void Empresa::carregaVendedor();
-void Empresa::carregaGerente();
-void Empresa::carregaDono();
+void Empresa::carregarAsg();
+void Empresa::carregarVendedor();
+void Empresa::carregarGerente();
+void Empresa::carregarDono();
 
 void Empresa::imprimeAsgs()
 {

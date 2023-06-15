@@ -26,6 +26,7 @@ public:
     Empresa(std::string nomeEmpresa, std::string cnpj, float faturamentoMensal);
 
     /* GETTERS */
+    float getFaturamentoMensal();
     std::string getNomeEmpresa();
     std::string getCNPJ();
 
@@ -42,10 +43,10 @@ public:
     /* MÉTODOS */
     void carregaFuncoes();
     void carregarEmpresa();
-    void carregaAsg();
-    void carregaVendedor();
-    void carregaGerente();
-    void carregaDono();
+    void carregarAsg();
+    void carregarVendedor();
+    void carregarGerente();
+    void carregarDono();
 
     void imprimeAsgs();
     void imprimeVendedores();
